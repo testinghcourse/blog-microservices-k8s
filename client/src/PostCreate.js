@@ -6,7 +6,9 @@ export default () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4000/posts", {
+    // await axios.post("http://localhost:4000/posts", {
+    // Now we will make a request to the ingress server instead of localhost
+    await axios.post("http://posts.com/posts/create", {
       title,
     });
     setTitle("");

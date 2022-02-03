@@ -7,7 +7,8 @@ export default ({ postId }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log("Submitted");
-    await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
+    // Now we will make a request to the ingress server instead of localhost
+    await axios.post(`http://posts.com/posts/${postId}/comments`, {
       content,
     });
 
