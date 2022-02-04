@@ -1,6 +1,11 @@
 # Base Image to have some basic programs
  FROM node:alpine
 
+# For create react app open issue
+# see https://github.com/facebook/create-react-app/issues/8688
+ENV CI=true
+
+
 # Setting the working directories
 WORKDIR /app
 
